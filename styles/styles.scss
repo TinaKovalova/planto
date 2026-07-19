@@ -1,0 +1,35 @@
+@use "sass:math";
+@import "fonts";
+@import "reset";
+@import "variables";
+@import "mixins";
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: toRem(24);
+    line-height: 1.2;
+    color: $textColor-75;
+    background-color: #1b2316;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+
+[class$="__container"] {
+    max-width: toRem($maxWidthContainer); //1668
+    padding-inline: toRem($containerPadding);
+    margin: 0 auto;
+}
+
+@import "header";
+@import "main";
+@import "footer";

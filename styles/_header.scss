@@ -1,0 +1,88 @@
+.header {
+    // .header__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: toRem(15);
+        @media (min-width: toRem(992)) {
+            padding-block: toRem(58);
+        }
+    }
+
+    // .header__actions
+
+    &__actions {
+    }
+}
+.logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    column-gap: toRem(7);
+    font-size: toRem(28);
+    font-weight: 900;
+
+    &::before {
+        content: "";
+        width: 1.714em;
+        height: 1.714em;
+        background: url("/assets/images/logo.png") center/contain no-repeat;
+    }
+}
+.navigation {
+    // .navigation__menu
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: toRem(20) toRem(69);
+        font-weight: 500;
+    }
+
+    // .navigation__item
+
+    &__item {
+    }
+
+    // .navigation__link
+
+    &__link {
+        transition: color 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $textColor;
+            }
+        }
+    }
+}
+.actions {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(61);
+    // .actions__cart-button
+
+    &__cart-button {
+    }
+}
+.search-form {
+    display: flex;
+    align-items: center;
+
+    // .search-form__input
+
+    &__input {
+        width: 0;
+        transition: width 0.4s ease;
+        &:focus-visible {
+            width: toRem(350);
+            margin-inline-end: toRem(12);
+        }
+    }
+}
+
+.burger-button {
+    display: none;
+}
