@@ -1,0 +1,45 @@
+@use "sass:math";
+@use "fonts";
+@use "reset";
+@use "variables" as *;
+@use "header";
+@use "main";
+@use "footer";
+:root {
+    interpolate-size: allow-keywords;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    color: $text;
+    line-height: 1.2;
+    background-color: #000000;
+    &:has(.opened-menu) {
+        overflow: hidden;
+    }
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+.main > * {
+    scroll-margin-top: 52px;
+    @media (min-width: 992px) {
+        scroll-margin-top: 82px;
+    }
+}
+[class*="__container"] {
+    max-width: 1300px; //1280px
+    padding-inline: 10px;
+    margin: 0 auto;
+}
