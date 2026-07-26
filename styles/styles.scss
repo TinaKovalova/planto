@@ -29,6 +29,26 @@ body {
     padding-inline: toRem($containerPadding);
     margin: 0 auto;
 }
+.button {
+    text-transform: capitalize;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: toRem(13);
+    border: toRem(2) solid $textColor-75;
+}
+.button--text {
+    min-width: toRem(180);
+    padding-block: toRem(12) toRem(13);
+    padding-inline: toRem(20);
+}
+
+.button--icon {
+    font-size: 1.167em;
+    padding-block: toRem(13);
+    padding-inline: toRem(13);
+}
 
 @import "header";
 @import "main";
