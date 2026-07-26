@@ -33,8 +33,12 @@
                 </nav>
                 <div class="header__actions actions">
                     <form action="#" name="search" class="search-form">
-                        <input type="search" name="search" id="search" class="search-form__input">
-                        <label for="search" class="search-form__lale icon-search"></label>
+                        <div class="search-form__row">
+                            <input type="search" name="search" id="search" class="search-form__input"
+                                autocomplete="off">
+                            <label for="search" class="search-form__label icon-search"></label>
+                        </div>
+                        <button type="submit" class="search-form__button icon-search"></button>
                     </form>
                     <button class="actions__cart-button icon-bag"></button>
                     <button class="burger-button"></button>
@@ -44,7 +48,7 @@
         <main class="page"></main>
         <footer class="footer"></footer>
     </div>
-
+    <script src="./js/index.js"></script>
 </body>
 
-</html> 
+</html>
