@@ -2,7 +2,6 @@
     // .hero__container
 
     &__container {
-        padding-block-start: toRem(97);
         display: grid;
         gap: toRem(20);
         min-height: toRem(833);
@@ -45,6 +44,12 @@
         display: flex;
         align-items: center;
         column-gap: toRem(16);
+        text-transform: capitalize;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $textColor;
+            }
+        }
     }
     &__button-icon {
         display: flex;
@@ -62,6 +67,73 @@
     &__poducts-slider {
         grid-row: span 2;
         align-content: center;
+        position: relative;
+
+        .hero-swiper-button-prev,
+        .hero-swiper-button-next {
+            padding: toRem(3);
+            border-radius: 50%;
+            border: toRem(1) solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            inset-block-end: 33.35%;
+            z-index: 10;
+            transition:
+                color 0.3s ease,
+                border-color 0.3s ease;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $textColor;
+                    border-color: currentColor;
+                    background-color: rgba($color: #26391a, $alpha: 0.5);
+                }
+            }
+        }
+        .hero-swiper-button-prev.swiper-button-disabled,
+        .hero-swiper-button-next.swiper-button-disabled {
+            visibility: hidden;
+        }
+        .hero-swiper-button-prev {
+            inset-inline-start: toRem(27);
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+        .hero-swiper-button-next {
+            inset-inline-end: toRem(27);
+        }
+    }
+    // .hero__swiper
+
+    &__swiper {
+        padding-block-start: toRem(162);
+        padding-block-end: toRem(44);
+        &.swiper {
+        }
+
+        & .swiper-wrapper {
+        }
+        & .swiper-slide {
+        }
+        & .swiper-slide.swiper-slide-active {
+        }
+
+        & .swiper-pagination {
+            top: auto;
+            bottom: toRem(93);
+            .swiper-pagination-bullet {
+                width: toRem(6);
+                height: toRem(6);
+                opacity: 1;
+                background-color: $textColor-75;
+            }
+            .swiper-pagination-bullet-active {
+                width: toRem(19);
+                border-radius: toRem(15);
+            }
+        }
     }
 
     //hero__reviews
@@ -139,6 +211,87 @@
         column-gap: toRem(9);
         & .icon-star--colored {
             color: #fff84e;
+        }
+    }
+}
+
+.product-slide-small {
+    max-width: toRem(512);
+    aspect-ratio: 512 / 644;
+    padding-inline: toRem(26);
+    padding-block-end: toRem(82);
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(27);
+    position: relative;
+    background: url("/assets/images/product-shape.svg") bottom/ 100% no-repeat;
+
+    // .product-slide-small__image-block
+
+    &__image-block {
+        width: 100%;
+        aspect-ratio: 1;
+        margin-top: -30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    // .product-slide-small__image
+
+    &__image {
+        max-width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    //product-slide-small__content-wrapper
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: toRem(27);
+        padding-inline-start: toRem(49);
+    }
+    // .product-slide-small__category
+
+    &__category {
+        font-size: toRem(23);
+        text-transform: capitalize;
+    }
+
+    // .product-slide-small__title
+
+    &__title {
+        font-size: toRem(38);
+    }
+
+    // .product-slide-small__title-link
+
+    &__title-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        transition: color 0.3s ease;
+    }
+    &__catecory-link,
+    &__title-link {
+        text-decoration-line: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 0.02em;
+        text-underline-offset: toRem(1);
+        transition:
+            color 0.3s ease,
+            text-decoration-color 0.3s ease,
+            text-underline-offset 0.3s ease;
+    }
+
+    @media (any-hover: hover) {
+        &__title-link:hover,
+        &__catecory-link:hover {
+            color: $textColor;
+            text-decoration-color: inherit;
+            text-underline-offset: toRem(3);
         }
     }
 }

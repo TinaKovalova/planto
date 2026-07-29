@@ -15,3 +15,28 @@ header.addEventListener("click", (e) => {
      }
 
 });
+
+const swiper = new Swiper(".hero__swiper.swiper", {
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".hero-swiper-button-next",
+    prevEl: ".hero-swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});

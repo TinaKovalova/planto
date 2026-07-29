@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/styles.css">
     <title>Planto.</title>
 </head>
@@ -66,28 +67,78 @@
                         </div>
                     </div>
                     <div class="hero__poducts-slider">
-                        <article class="review">
-                            <div class="review__author-info review-author-details">
-                                <div class="review-author-details__avatar">
-                                    <img src="assets/images/reviews/avatar_01.jpg" alt="avatar"
-                                        class="review-author-details__avatar-image">
+                        <div class="hero__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <article class="product-slide-small">
+                                        <div class="product-slide-small__image-block">
+                                            <img src="/assets/images/image_01.png" alt="plant-01"
+                                                class="product-slide-small__image">
+                                        </div>
+                                        <div class="product-slide-small__content-wrapper">
+                                            <div class="product-slide-small__category">
+                                                <a href="#" class="product-slide-small__catecory-link ">trendy House
+                                                    Plant</a>
+                                            </div>
+                                            <h5 class="product-slide-small__title">
+                                                <a href="#" class="product-slide-small__title-link">
+                                                    Calathea plant
+                                                </a>
+                                            </h5>
+                                            <button class="product-slide-small__button button button--text">
+                                                buy Now
+                                            </button>
+                                        </div>
+                                    </article>
                                 </div>
-                                <div class="review-author-details__wrapper">
-                                    <h5 class="review-author-details__author-name">alina Patel</h5>
-                                    <div class="review-author-details__rate">
-                                        <span class="icon-star icon-star--colored"></span>
-                                        <span class="icon-star icon-star--colored"></span>
-                                        <span class="icon-star icon-star--colored"></span>
-                                        <span class="icon-star icon-star--colored"></span>
-                                        <span class="icon-star"></span>
-                                    </div>
+                                <div class="swiper-slide">
+                                    <article class="product-slide-small">
+                                        <div class="product-slide-small__image-block">
+                                            <img src="/assets/images/image_02.png" alt="plant-02"
+                                                class="product-slide-small__image">
+                                        </div>
+                                        <div class="product-slide-small__content-wrapper">
+                                            <div class="product-slide-small__category">
+                                                <a href="#" class="product-slide-small__catecory-link ">trendy House
+                                                    Plant</a>
+                                            </div>
+                                            <h5 class="product-slide-small__title">
+                                                <a href="#" class="product-slide-small__title-link">
+                                                    Calathea plant
+                                                </a>
+                                            </h5>
+                                            <button class="product-slide-small__button button button--text">buy
+                                                Now</button>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="product-slide-small">
+                                        <div class="product-slide-small__image-block">
+                                            <img src="/assets/images/image_01.png" alt="plant-01"
+                                                class="product-slide-small__image">
+                                        </div>
+                                        <div class="product-slide-small__content-wrapper">
+                                            <div class="product-slide-small__category">
+                                                <a href="#" class="product-slide-small__catecory-link ">trendy House
+                                                    Plant</a>
+                                            </div>
+                                            <h5 class="product-slide-small__title">
+                                                <a href="#" class="product-slide-small__title-link">
+                                                    Calathea plant
+                                                </a>
+                                            </h5>
+                                            <button class="product-slide-small__button button button--text">buy
+                                                Now</button>
+                                        </div>
+                                    </article>
                                 </div>
                             </div>
-                            <div class="review__text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                            </div>
-                        </article>
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+                        <button class="hero-swiper-button-prev icon-angle-right"></button>
+                        <button class="hero-swiper-button-next icon-angle-right"></button>
                     </div>
                     <div class="hero__reviews">
                         <article class="review">
@@ -118,6 +169,7 @@
         </main>
         <footer class="footer"></footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
