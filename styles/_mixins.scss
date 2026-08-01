@@ -97,3 +97,8 @@
 	backdrop-filter: blur(toRem(25));
 	background: rgba(255, 255, 255, 0.05);
 }
+@mixin glass-background {
+	border: toRem(2) solid rgba(255, 255, 255, 0.27);
+	backdrop-filter: blur(toRem(40));
+	background: rgba(255, 255, 255, 0.05);
+}
