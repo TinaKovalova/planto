@@ -1212,11 +1212,11 @@ body {
 }
 .trendy-plant-card__image {
   max-width: 100%;
-  max-height: 115%;
+  height: 115%;
   -o-object-position: bottom;
      object-position: bottom;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   aspect-ratio: 1;
   inset-block-end: 0;
