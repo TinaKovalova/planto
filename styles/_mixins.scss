@@ -102,3 +102,41 @@
 	backdrop-filter: blur(toRem(40));
 	background: rgba(255, 255, 255, 0.05);
 }
+
+@mixin swiper-button-style {
+	padding: toRem(3);
+	border-radius: 50%;
+	border: toRem(1) solid transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	transition:
+		color 0.3s ease,
+		border-color 0.3s ease;
+	&.swiper-button-disabled {
+		visibility: hidden;
+	}
+	&[class*="button-prev"]::before {
+		transform: rotate(180deg);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $textColor;
+			border-color: currentColor;
+			background-color: rgba($color: #26391a, $alpha: 0.5);
+		}
+	}
+}
+@mixin swiper-pagination-bullet-style($width: 6, $widthActive: 19, $color: $textColor-75) {
+	width: toRem($width);
+	height: toRem($width);
+	opacity: 1;
+	background-color: $color;
+	transition: all 0.3s ease;
+	&.swiper-pagination-bullet-active {
+		width: toRem($widthActive);
+		border-radius: toRem(15);
+	}
+}

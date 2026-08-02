@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
   const burgerButton = document.querySelector(".burger-button");
   const navigation = document.querySelector(".navigation");
+  const fraction = document.querySelector(".our-best__fraction");
+  const fractionActive = fraction.querySelector(".our-best__fraction-active");
+    const fractionCount = fraction.querySelector(".our-best__fraction-count");
 
   header.addEventListener("click", (e) => {
 
@@ -16,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  const swiper = new Swiper(".hero__swiper.swiper", {
+  const heroSwiper = new Swiper(".hero__swiper.swiper", {
     effect: "fade",
     fadeEffect: {
       crossFade: true,
@@ -72,6 +75,26 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       992: {
         spaceBetween: 33,
+      },
+    },
+  });
+
+  const bestSlidesCount = document.querySelectorAll(".our-best__slider.swiper .swiper-slide").length;
+
+  const swiper = new Swiper(".our-best__slider.swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".our-best__button-next",
+      prevEl: ".our-best__button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      slideChange: (e) => {
+        fractionActive.textContent = e.realIndex<9 ? `0${e.realIndex + 1}/` :`${e.realIndex + 1}/` ;
+        fractionCount.textContent = bestSlidesCount<10 ? `0${bestSlidesCount}` : `${bestSlidesCount}`;
       },
     },
   });
