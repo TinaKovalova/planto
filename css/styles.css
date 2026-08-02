@@ -848,6 +848,7 @@ body {
 }
 .review__text {
   font-size: 1.0625rem;
+  font-size: 1.0625rem;
   line-clamp: 3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -855,8 +856,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.review-author-details {
+.review .review-author-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -864,45 +864,49 @@ body {
      -moz-column-gap: 0.625rem;
           column-gap: 0.625rem;
 }
-.review-author-details > *:not(:last-child) {
+.review .review-author-details > *:not(:last-child) {
   margin-bottom: 1.375rem;
 }
 @media (min-width: 62rem) {
-  .review-author-details {
+  .review .review-author-details {
     -webkit-column-gap: 1.75rem;
        -moz-column-gap: 1.75rem;
             column-gap: 1.75rem;
   }
 }
-.review-author-details__avatar {
+.review .review-author-details__avatar {
   border-radius: 50%;
   width: 4rem;
   aspect-ratio: 1;
   overflow: hidden;
 }
-.review-author-details__avatar-image {
+.review .review-author-details__avatar-image {
   width: 100%;
   min-height: 100%;
   aspect-ratio: 1;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
 }
-.review-author-details__author-name {
+.review .review-author-details__author-name {
   text-transform: capitalize;
   font-size: 1.375rem;
   color: #ffffff;
 }
-.review-author-details__rate {
+.review .review-author-details__author-name:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+.review .review-author-details__rate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 0.9375rem;
   -webkit-column-gap: 0.5625rem;
      -moz-column-gap: 0.5625rem;
           column-gap: 0.5625rem;
 }
-.review-author-details__rate .icon-star--colored {
+.review .review-author-details__rate .icon-star--colored {
   color: #fff84e;
 }
 
@@ -1484,5 +1488,91 @@ body {
             padding-block-start: 6.25rem;
     row-gap: 10.125rem;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  }
+}
+
+.customer-review__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 2.5rem;
+}
+@media (min-width: 62rem) {
+  .customer-review__container {
+    -webkit-padding-before: 6.25rem;
+            padding-block-start: 6.25rem;
+    -webkit-padding-after: 9.0625rem;
+            padding-block-end: 9.0625rem;
+  }
+}
+.customer-review__title:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 62rem) {
+  .customer-review__title:not(:last-child) {
+    margin-bottom: 11.375rem;
+  }
+}
+.customer-review__reviews-wrapper {
+  width: 100%;
+}
+.customer-review__reviews-wrapper .review .review-author-details__author-name {
+  font-size: 1.625rem;
+}
+.customer-review__reviews-wrapper .review .review__text {
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+}
+@media (min-width: 62rem) {
+  .customer-review__reviews-wrapper .review {
+    -webkit-padding-before: 3.375rem;
+            padding-block-start: 3.375rem;
+    -webkit-padding-after: 3.4375rem;
+            padding-block-end: 3.4375rem;
+    -webkit-padding-start: 3.625rem;
+            padding-inline-start: 3.625rem;
+    -webkit-padding-end: 3.1875rem;
+            padding-inline-end: 3.1875rem;
+  }
+  .customer-review__reviews-wrapper .review .review-author-details__author-name {
+    font-size: 2.375rem;
+  }
+  .customer-review__reviews-wrapper .review .review-author-details__avatar {
+    width: 5.5rem;
+  }
+  .customer-review__reviews-wrapper .review .review-author-details {
+    -webkit-column-gap: 2.375rem;
+       -moz-column-gap: 2.375rem;
+            column-gap: 2.375rem;
+  }
+  .customer-review__reviews-wrapper .review .review-author-details > *:not(:last-child) {
+    margin-bottom: 3.8125rem;
+  }
+  .customer-review__reviews-wrapper .review .review-author-details__rate {
+    font-size: 1.1875rem;
+  }
+}
+.customer-review__slider .swiper-slide {
+  width: 18.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+@media (min-width: 29.875rem) {
+  .customer-review__slider .swiper-slide {
+    width: 28.125rem;
+  }
+}
+@media (min-width: 62rem) {
+  .customer-review__slider .swiper-slide {
+    width: 32rem;
   }
 }/*# sourceMappingURL=styles.css.map */

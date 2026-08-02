@@ -218,6 +218,7 @@
 
     &__text {
         font-size: toRem(17);
+        font-size: toRem(17);
         line-clamp: 3;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -225,55 +226,59 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-}
-.review-author-details {
-    display: flex;
-    column-gap: toRem(10);
-    & > *:not(:last-child) {
-        margin-bottom: toRem(22);
-    }
-    @media (min-width: toRem(992)) {
-        column-gap: toRem(28);
-    }
-    // .review-author-details__avatar
-
-    &__avatar {
-        border-radius: 50%;
-        width: toRem(64);
-        aspect-ratio: 1;
-        overflow: hidden;
-    }
-
-    // .review-author-details__avatar-image
-
-    &__avatar-image {
-        width: 100%;
-        min-height: 100%;
-        aspect-ratio: 1;
-        object-fit: contain;
-        object-position: center;
-    }
-
-    // .review-author-details__wrapper
-
-    &__wrapper {
-    }
-
-    // .review-author-details__author-name
-
-    &__author-name {
-        text-transform: capitalize;
-        font-size: toRem(22);
-        color: $textColor;
-    }
-
-    // .review-author-details__rate
-
-    &__rate {
+    & .review-author-details {
         display: flex;
-        column-gap: toRem(9);
-        & .icon-star--colored {
-            color: #fff84e;
+        column-gap: toRem(10);
+        & > *:not(:last-child) {
+            margin-bottom: toRem(22);
+        }
+        @media (min-width: toRem(992)) {
+            column-gap: toRem(28);
+        }
+        // .review-author-details__avatar
+
+        &__avatar {
+            border-radius: 50%;
+            width: toRem(64);
+            aspect-ratio: 1;
+            overflow: hidden;
+        }
+
+        // .review-author-details__avatar-image
+
+        &__avatar-image {
+            width: 100%;
+            min-height: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            object-position: top;
+        }
+
+        // .review-author-details__wrapper
+
+        &__wrapper {
+        }
+
+        // .review-author-details__author-name
+
+        &__author-name {
+            text-transform: capitalize;
+            font-size: toRem(22);
+            color: $textColor;
+            &:not(:last-child) {
+                margin-bottom: toRem(4);
+            }
+        }
+
+        // .review-author-details__rate
+
+        &__rate {
+            display: flex;
+            font-size: toRem(15);
+            column-gap: toRem(9);
+            & .icon-star--colored {
+                color: #fff84e;
+            }
         }
     }
 }
@@ -651,6 +656,94 @@
                 padding-block-start: toRem(100);
                 row-gap: toRem(162);
                 grid-template-columns: repeat(auto-fill, minmax(toRem(400), 1fr));
+            }
+        }
+    }
+}
+.customer-review {
+    // .customer-review__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: toRem(40);
+        @media (min-width: toRem(992)) {
+            padding-block-start: toRem(100);
+            padding-block-end: toRem(145);
+        }
+    }
+
+    // .customer-review__title
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: toRem(40);
+            @media (min-width: toRem(992)) {
+                margin-bottom: toRem(182);
+            }
+        }
+    }
+
+    // .customer-review__reviews-wrapper
+
+    &__reviews-wrapper {
+        width: 100%;
+        .review {
+            // .review-author-details__author-name
+
+            & .review-author-details__author-name {
+                font-size: toRem(26);
+            }
+
+            // .review-author-details__rate
+
+            & .review__text {
+                line-clamp: 5;
+                -webkit-line-clamp: 5;
+            }
+            @media (min-width: toRem(992)) {
+                padding-block-start: toRem(54);
+                padding-block-end: toRem(55);
+                padding-inline-start: toRem(58);
+                padding-inline-end: toRem(51);
+                & .review-author-details__author-name {
+                    font-size: toRem(38);
+                }
+                & .review-author-details__avatar {
+                    width: toRem(88);
+                }
+                & .review-author-details {
+                    column-gap: toRem(38);
+                    & > *:not(:last-child) {
+                        margin-bottom: toRem(61);
+                    }
+                }
+                & .review-author-details__rate {
+                    font-size: toRem(19);
+                }
+            }
+        }
+    }
+
+    // .customer-review__slider
+
+    &__slider {
+        &.swiper {
+        }
+        & .swiper-wrapper {
+        }
+        & .swiper-slide {
+            width: toRem(300);
+            display: flex;
+            height: auto;
+
+            @media (min-width: toRem(478)) {
+                width: toRem(450);
+            }
+
+            @media (min-width: toRem(992)) {
+                width: toRem(512);
             }
         }
     }

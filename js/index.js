@@ -49,4 +49,30 @@ document.addEventListener("DOMContentLoaded", () => {
     //   },
     // },
   });
+  const reviewsSwiper = new Swiper(".customer-review__slider.swiper", {
+    slidesPerView: "auto",
+    centerInsufficientSlides: true,
+    freeMode: true,
+    grabCursor: true,
+    loop: true,
+    speed: 2000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+      320: {
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+      },
+      468: {
+        spaceBetween: 20,
+        centeredSlides: false,
+      },
+      992: {
+        spaceBetween: 33,
+      },
+    },
+  });
 })
