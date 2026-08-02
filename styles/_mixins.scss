@@ -93,7 +93,7 @@
 }
 
 @mixin blur-background {
-	box-shadow: toRem(0) toRem(9) 18.399999618530273px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: toRem(0) toRem(9) toRem(18.4) toRem(0) rgba(0, 0, 0, 0.25);
 	backdrop-filter: blur(toRem(25));
 	background: rgba(255, 255, 255, 0.05);
 }

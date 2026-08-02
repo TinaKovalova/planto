@@ -1,4 +1,8 @@
 .header {
+    position: fixed;
+    inset-inline-start: 0;
+    z-index: 50;
+    width: 100%;
     // .header__container
 
     &__container {
@@ -16,10 +20,11 @@
             inset-inline-start: 0;
             inset-block-start: 0;
             z-index: -1;
-            background-color: #1b2316;
+            background-color: rgba($color: #1b2316, $alpha: 0.5);
+            backdrop-filter: blur(toRem(40));
         }
         @media (min-width: toRem(992)) {
-            padding-block: toRem(58);
+            padding-block: toRem(30);
         }
         @media (max-width: toRem(991.98)) {
             &::before {
