@@ -93,10 +93,7 @@
             }
         }
     }
-    // .footer__subscribe-header
-
-    &__subscribe-header {
-    }
+   
 
     // .footer__menu-list
 
@@ -107,14 +104,6 @@
         @media (min-width: toRem(992)) {
             flex-direction: column;
         }
-    }
-
-    // .footer__menu-item
-
-    &__menu-item {
-        // &:not(:last-child) {
-        //     margin-bottom: toRem(22);
-        // }
     }
 
     // .footer__menu-link
@@ -218,13 +207,6 @@
     text-transform: uppercase;
     // .languages__item
 
-    &__item {
-    }
-
-    // .languages__link
-
-    &__link {
-    }
     @media (max-width: toRem(767.98)) {
         justify-content: space-evenly;
     }

@@ -124,11 +124,6 @@
             @include adaptiveValue("padding-block-end", 44, 20);
         }
 
-        &.swiper {
-        }
-
-        & .swiper-wrapper {
-        }
         & .swiper-slide {
             display: flex;
             flex-direction: column;
@@ -139,8 +134,6 @@
             @media (min-width: toRem(992)) {
                 // aspect-ratio: 512 / 644;
             }
-        }
-        & .swiper-slide.swiper-slide-active {
         }
 
         & .swiper-pagination {
@@ -178,10 +171,6 @@
         padding-block-end: toRem(43);
         padding-inline-start: toRem(38);
         padding-inline-end: toRem(18);
-    }
-    // .review__author-info
-
-    &__author-info {
     }
 
     // .review__text
@@ -222,11 +211,6 @@
             aspect-ratio: 1;
             object-fit: contain;
             object-position: top;
-        }
-
-        // .review-author-details__wrapper
-
-        &__wrapper {
         }
 
         // .review-author-details__author-name
@@ -316,11 +300,6 @@
         text-transform: capitalize;
     }
 
-    // .product-card__catecory-link
-
-    &__catecory-link {
-    }
-
     // .product-card__title
 
     &__title,
@@ -329,10 +308,6 @@
         @include adaptiveValue("font-size", 38, 20);
     }
 
-    // .product-card__title-link
-
-    &__title-link {
-    }
     &__catecory-link,
     &__title-link {
         text-decoration-line: underline;
@@ -374,11 +349,6 @@
         align-items: center;
         gap: toRem(15);
         flex-wrap: wrap;
-    }
-
-    // .product-card__button
-
-    &__button {
     }
 }
 .trendy-plants {
@@ -704,10 +674,6 @@
     // .customer-review__slider
 
     &__slider {
-        &.swiper {
-        }
-        & .swiper-wrapper {
-        }
         & .swiper-slide {
             width: toRem(300);
             display: flex;
@@ -758,16 +724,6 @@
                 border-radius: toRem(92);
             }
 
-            // .trendy-plant-card__image-block
-
-            &__image-block {
-            }
-
-            // .trendy-plant-card__image
-
-            &__image {
-            }
-
             // .trendy-plant-card__content-wrapper
 
             &__content-wrapper {
@@ -783,11 +739,6 @@
                 color: $textColor-75;
             }
 
-            // .trendy-plant-card__title-link
-
-            &__title-link {
-            }
-
             // .trendy-plant-card__description
 
             &__description {
@@ -797,11 +748,6 @@
                     margin-bottom: toRem(42);
                     @include adaptiveValue("margin-bottom", 42, 20);
                 }
-            }
-
-            // .trendy-plant-card__actions
-
-            &__actions {
             }
 
             // .trendy-plant-card__button
@@ -856,13 +802,6 @@
 
     &__slider {
         padding-block: toRem(50);
-
-        .swiper {
-        }
-        .swiper-wrapper {
-        }
-        .swiper-slide {
-        }
         .swiper-pagination {
             display: none;
         }
