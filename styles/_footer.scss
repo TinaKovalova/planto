@@ -1,4 +1,5 @@
 .footer {
+    background: rgba(34, 44, 29, 1);
     color: $textColor;
     font-weight: 500;
 
@@ -167,12 +168,12 @@
 
     padding: toRem(3);
     position: relative;
-    &::after {
+    &::before {
         content: "";
         width: 100%;
         height: toRem(75);
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         inset-inline-start: 0;
         inset-block-start: 0;
         border-radius: toRem(8);
@@ -181,6 +182,7 @@
     // .form-subscription__input
 
     &__input {
+        position: relative;
         padding-block: toRem(22);
         flex: 1 1 toRem(250);
         min-width: toRem(250);
@@ -199,6 +201,7 @@
     // .form-subscription__button
 
     &__button {
+        position: relative;
         @media (max-width: toRem(479.98)) {
             min-width: 100%;
         }
