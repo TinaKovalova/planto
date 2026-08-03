@@ -320,7 +320,7 @@ body {
   content: "";
   width: 1.714em;
   height: 1.714em;
-  background: url("/assets/images/logo.svg") center/contain no-repeat;
+  background: url("../assets/images/logo.svg") center/contain no-repeat;
 }
 @media (max-width: 61.99875rem) {
   .header .logo {

@@ -54,7 +54,7 @@
         content: "";
         width: 1.714em;
         height: 1.714em;
-        background: url("/assets/images/logo.svg") center/contain no-repeat;
+        background: url("../assets/images/logo.svg") center/contain no-repeat;
     }
     @media (max-width: toRem(991.98)) {
         .header & {

@@ -36,8 +36,6 @@
 
     &__about {
         flex: 1 1 toRem(580);
-        // max-width: 80%;
-        // background-color: gainsboro;
         @media (min-width: toRem(992)) {
             max-width: toRem(580);
         }
@@ -67,11 +65,9 @@
     // .footer__menu
 
     &__menu {
-        // background-color: aqua;
         flex: 0 0 toRem(200);
         display: flex;
         flex-direction: column;
-        // align-items: center;
         @media (max-width: toRem(991.98)) {
             min-width: 100%;
             // order: 2;
@@ -116,8 +112,6 @@
 
     &__subscribe {
         flex: 0.8 1 toRem(562);
-        // max-width: 90%;
-        // background-color: wheat;
         @media (max-width: toRem(768)) {
         }
         @media (min-width: toRem(992)) {
@@ -201,7 +195,6 @@
     flex: 1 1 50%;
     display: flex;
     gap: toRem(20);
-    // justify-content: space-between;
     flex-wrap: wrap;
     font-weight: 800;
     text-transform: uppercase;

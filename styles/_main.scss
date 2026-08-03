@@ -131,10 +131,7 @@
             & > * {
                 flex-grow: 1;
             }
-            @media (min-width: toRem(992)) {
-                // aspect-ratio: 512 / 644;
-            }
-        }
+                   }
 
         & .swiper-pagination {
             top: auto;
