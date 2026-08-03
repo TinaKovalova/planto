@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     breakpoints: {
       320: {
+        spaceBetween: 10,
         centeredSlides: true,
         centeredSlidesBounds: true,
       },
