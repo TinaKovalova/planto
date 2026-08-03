@@ -48,25 +48,28 @@
     column-gap: toRem(7);
     font-size: toRem(28);
     font-weight: 900;
+    color: $textColor-75;
 
     &::before {
         content: "";
         width: 1.714em;
         height: 1.714em;
-        background: url("/assets/images/logo.png") center/contain no-repeat;
+        background: url("/assets/images/logo.svg") center/contain no-repeat;
     }
     @media (max-width: toRem(991.98)) {
-        column-gap: toRem(3);
-        flex-direction: column;
-        align-items: center;
-        span {
-            font-size: toRem(12);
-            transform: translate(5%, -20%);
-        }
-        &::before {
-            width: 1.1em;
-            height: 1.1em;
-            opacity: 0.6;
+        .header & {
+            column-gap: toRem(3);
+            flex-direction: column;
+            align-items: center;
+            span {
+                font-size: toRem(12);
+                transform: translate(5%, -20%);
+            }
+            &::before {
+                width: 1.1em;
+                height: 1.1em;
+                opacity: 0.6;
+            }
         }
     }
 }

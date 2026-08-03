@@ -55,6 +55,16 @@ body {
     padding-block: toRem(13);
     padding-inline: toRem(13);
 }
+.button--colored {
+    padding-inline: toRem(16);
+    padding-block: toRem(17) toRem(18);
+    color: #000000;
+    background-color: $textColor;
+    border-color: $textColor;
+    font-weight: 700;
+    font-size: toRem(22);
+    text-transform: uppercase;
+}
 
 @import "header";
 @import "main";
