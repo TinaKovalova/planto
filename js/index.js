@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navigation = document.querySelector(".navigation");
   const fraction = document.querySelector(".our-best__fraction");
   const fractionActive = fraction.querySelector(".our-best__fraction-active");
-    const fractionCount = fraction.querySelector(".our-best__fraction-count");
+  const fractionCount = fraction.querySelector(".our-best__fraction-count");
 
   header.addEventListener("click", (e) => {
 
@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeEffect: {
       crossFade: true,
     },
+    speed: 2000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -33,24 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".hero-swiper-button-next",
       prevEl: ".hero-swiper-button-prev",
     },
-    // breakpoints: {
-    //   640: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20,
-    //   },
-    //   768: {
-    //     slidesPerView: 4,
-    //     spaceBetween: 40,
-    //   },
-    //   992: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 0,
-    //     effect: "fade",
-    //     fadeEffect: {
-    //       crossFade: true,
-    //     },
-    //   },
-    // },
+   
   });
   const reviewsSwiper = new Swiper(".customer-review__slider.swiper", {
     slidesPerView: "auto",
@@ -58,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     freeMode: true,
     grabCursor: true,
     loop: true,
-    speed: 2000,
+    speed: 3000,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,

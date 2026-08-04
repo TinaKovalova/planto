@@ -131,7 +131,7 @@
             & > * {
                 flex-grow: 1;
             }
-                   }
+        }
 
         & .swiper-pagination {
             top: auto;
@@ -157,17 +157,113 @@
 }
 
 .review {
-    @include border(rgba(255, 255, 255, 0.2));
-    @include blur-background;
     border-radius: toRem(45);
     padding-block: toRem(20);
     padding-inline: toRem(20);
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: toRem(45);
+        @include blur-background;
+        @include border(rgba(255, 255, 255, 0.2));
+    }
+
+    .customer-review & {
+        &::before {
+            @supports (border-shape: initial) {
+                border-shape: shape(
+                    from 0% 16.66%,
+                    curve to 17.1% 0.09% with 0% 6.74%/8.03% -0.93%,
+                    curve to 50% 2.4% with 27.23% 1.23%/40% 2.4%,
+                    curve to 82.9% 0.09% with 60% 2.4%/72.77% 1.23%,
+                    curve to 100% 16.66% with 91.97% -0.93%/100% 6.74%,
+                    vline to 83.62%,
+                    curve to 84.96% 100% with 100% 92.67%/93.27% 100%,
+                    hline to 15.04%,
+                    curve to 0% 83.62% with 6.73% 100%/0% 92.67%,
+                    vline to 16.66%,
+                    close,
+                    close,
+                    move to 82.92% 0.3%,
+                    curve to 99.8% 16.66% with 91.87% -0.71%/99.8% 6.87%,
+                    vline to 83.62%,
+                    curve to 84.96% 99.79% with 99.8% 92.55%/93.16% 99.79%,
+                    hline to 15.04%,
+                    curve to 0.2% 83.62% with 6.84% 99.79%/0.2% 92.55%,
+                    vline to 16.66%,
+                    curve to 17.08% 0.3% with 0.2% 6.87%/8.13% -0.71%,
+                    curve to 50% 2.61% with 27.21% 1.45%/39.99% 2.61%,
+                    curve to 82.92% 0.3% with 60.01% 2.61%/72.79% 1.45%,
+                    close,
+                    close,
+                    move to 0% 16.66%,
+                    curve to 17.1% 0.09% with 0% 6.74%/8.03% -0.93%,
+                    curve to 50% 2.4% with 27.23% 1.23%/40% 2.4%,
+                    curve to 82.9% 0.09% with 60% 2.4%/72.77% 1.23%,
+                    curve to 100% 16.66% with 91.97% -0.93%/100% 6.74%,
+                    vline to 83.62%,
+                    curve to 84.96% 100% with 100% 92.67%/93.27% 100%,
+                    hline to 15.04%,
+                    curve to 0% 83.62% with 6.73% 100%/0% 92.67%,
+                    vline to 16.66%,
+                    close
+                );
+                aspect-ratio: 1.089;
+                clip-path: shape(
+                    from 0% 16.66%,
+                    curve to 17.1% 0.09% with 0% 6.74%/8.03% -0.93%,
+                    curve to 50% 2.4% with 27.23% 1.23%/40% 2.4%,
+                    curve to 82.9% 0.09% with 60% 2.4%/72.77% 1.23%,
+                    curve to 100% 16.66% with 91.97% -0.93%/100% 6.74%,
+                    vline to 83.62%,
+                    curve to 84.96% 100% with 100% 92.67%/93.27% 100%,
+                    hline to 15.04%,
+                    curve to 0% 83.62% with 6.73% 100%/0% 92.67%,
+                    vline to 16.66%,
+                    close,
+                    close,
+                    move to 82.92% 0.3%,
+                    curve to 99.8% 16.66% with 91.87% -0.71%/99.8% 6.87%,
+                    vline to 83.62%,
+                    curve to 84.96% 99.79% with 99.8% 92.55%/93.16% 99.79%,
+                    hline to 15.04%,
+                    curve to 0.2% 83.62% with 6.84% 99.79%/0.2% 92.55%,
+                    vline to 16.66%,
+                    curve to 17.08% 0.3% with 0.2% 6.87%/8.13% -0.71%,
+                    curve to 50% 2.61% with 27.21% 1.45%/39.99% 2.61%,
+                    curve to 82.92% 0.3% with 60.01% 2.61%/72.79% 1.45%,
+                    close,
+                    close,
+                    move to 0% 16.66%,
+                    curve to 17.1% 0.09% with 0% 6.74%/8.03% -0.93%,
+                    curve to 50% 2.4% with 27.23% 1.23%/40% 2.4%,
+                    curve to 82.9% 0.09% with 60% 2.4%/72.77% 1.23%,
+                    curve to 100% 16.66% with 91.97% -0.93%/100% 6.74%,
+                    vline to 83.62%,
+                    curve to 84.96% 100% with 100% 92.67%/93.27% 100%,
+                    hline to 15.04%,
+                    curve to 0% 83.62% with 6.73% 100%/0% 92.67%,
+                    vline to 16.66%,
+                    close
+                );
+            }
+        }
+    }
 
     @media (min-width: toRem(992)) {
         padding-block-start: toRem(41);
         padding-block-end: toRem(43);
         padding-inline-start: toRem(38);
         padding-inline-end: toRem(18);
+    }
+    &__author-info,
+    &__text {
+        position: relative;
     }
 
     // .review__text
@@ -191,6 +287,7 @@
         @media (min-width: toRem(992)) {
             column-gap: toRem(28);
         }
+
         // .review-author-details__avatar
 
         &__avatar {
@@ -240,13 +337,58 @@
     display: flex;
     flex-direction: column;
     row-gap: toRem(10);
-    border-radius: toRem(42);
-    box-shadow: toRem(0) toRem(9) toRem(18.4) toRem(0) rgba(0, 0, 0, 0.25);
-    @include glass-background;
+    border-radius: toRem(77);
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-color: red;
+        inset-inline-start: 0;
+        width: 100%;
+        height: 100%;
+        inset-block-start: 0;
+        @include glass-background;
+        @include border(rgba(255, 255, 255, 0.2));
+        box-shadow: toRem(0) toRem(9) toRem(18.4) toRem(0) rgba(0, 0, 0, 0.25);
+        border-radius: toRem(77);
+        aspect-ratio: 0.816;
+    }
+    @supports (border-shape: initial) {
+        &::before {
+            clip-path: shape(
+                from 80.32% 0.16%,
+                curve to 100% 13.65% with 90.53% -1.09%/100% 5.24%,
+                vline to 86.73%,
+                curve to 83.73% 100% with 100% 94.06%/92.71% 100%,
+                hline to 16.27%,
+                curve to 0% 86.73% with 7.29% 100%/0% 94.06%,
+                vline to 13.65%,
+                line to 0% 13.45%,
+                curve to 19.68% 0.16% with 0.15% 5.14%/9.55% -1.08%,
+                curve to 50% 2.44% with 29.34% 1.34%/40.82% 2.44%,
+                curve to 80.32% 0.16% with 59.18% 2.44%/70.66% 1.34%,
+                close
+            );
+            border-shape: shape(
+                from 80.32% 0.16%,
+                curve to 100% 13.65% with 90.53% -1.09%/100% 5.24%,
+                vline to 86.73%,
+                curve to 83.73% 100% with 100% 94.06%/92.71% 100%,
+                hline to 16.27%,
+                curve to 0% 86.73% with 7.29% 100%/0% 94.06%,
+                vline to 13.65%,
+                line to 0% 13.45%,
+                curve to 19.68% 0.16% with 0.15% 5.14%/9.55% -1.08%,
+                curve to 50% 2.44% with 29.34% 1.34%/40.82% 2.44%,
+                curve to 80.32% 0.16% with 59.18% 2.44%/70.66% 1.34%,
+                close
+            );
+        }
+    }
     @media (min-width: toRem(992)) {
         padding-inline: toRem(26);
         padding-block-end: toRem(57);
-        border-radius: toRem(77);
         row-gap: toRem(36);
     }
 
@@ -427,6 +569,7 @@
 }
 .trendy-plant-card {
     @include glass-background;
+    @include border(rgba(255, 255, 255, 0.2));
     border-radius: toRem(77);
     display: flex;
     flex-direction: column;
@@ -555,7 +698,7 @@
 }
 .page__sections-wrapper {
     padding-block-start: toRem(108);
-    background: url("../assets/images/hero-bg.jpg") top/cover no-repeat;
+    background: url("../assets/images/hero-bg.webp") top/cover no-repeat;
 }
 .top-selling {
     // .top-selling__container
@@ -644,9 +787,10 @@
                 line-clamp: 5;
                 -webkit-line-clamp: 5;
             }
+
             @media (min-width: toRem(992)) {
-                padding-block-start: toRem(54);
-                padding-block-end: toRem(55);
+                padding-block-start: toRem(98);
+                padding-block-end: toRem(95);
                 padding-inline-start: toRem(58);
                 padding-inline-end: toRem(51);
                 & .review-author-details__author-name {

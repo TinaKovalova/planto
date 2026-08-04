@@ -13,6 +13,9 @@ body {
     line-height: 1.2;
     color: $textColor-75;
     background-color: #1b2316;
+    &:has(.navigation.active) {
+        overflow-y: hidden;
+    }
 }
 .wrapper {
     min-height: 100%;
